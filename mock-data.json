@@ -1,0 +1,21 @@
+{
+    "cats": [{
+        "name": "Cat 1",
+        "image": "img/cat1.jpg"
+    }, {
+        "name": "Cat 2",
+        "image": "img/cat2.jpg"
+    }, {
+        "name": "Cat 3",
+        "image": "img/cat3.jpg"
+    }, {
+        "name": "Cat 4",
+        "image": "img/cat4.jpg"
+    }, {
+        "name": "Cat 5",
+        "image": "img/cat5.jpg"
+    }, {
+        "name": "Cat 6",
+        "image": "img/cat6.jpg"
+    }]
+}
