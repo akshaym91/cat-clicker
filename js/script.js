@@ -1,3 +1,11 @@
+var ViewModel = function() {
+    this.clickCount = ko.observable(0);
+    this.name = ko.observable('Tabby');
+    this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
+};
+
+ko.applyBindings(new ViewModel());
+
 var model = {
     clicked: [0, 0, 0, 0, 0, 0],
     init: function() {
@@ -16,9 +24,10 @@ var list_view = {
             url: 'mock-data.json',
             success: function(result) {
                 $.each(result.cats, function(index, cat) {
-                    $('<li/>', {
+                    $('<a/>', {
                         'id': 'cat' + (index),
-                        'html': cat.name + ' clicked: ' + 0,
+                        'class': 'list-group-item',
+                        'html': cat.name,
                         'onclick': 'octopus.onNameClick(id)'
                     }).appendTo('#cat-list');
                 });
@@ -40,13 +49,11 @@ var canvas_view = {
             'src': 'img/cat' + index + '.jpg',
             'onclick': 'octopus.onCatClick(id)'
         }).appendTo('#cat-canvas').fadeIn();
-        $('<p/>', {
-            'class': 'counter',
-            'html': octopus.getMyClicks(index)
-        }).appendTo('#cat-canvas').fadeIn();
+        $('.cat-name').text('Cat '+ index);
+        $('.click-counter').text(octopus.getMyClicks(index));
     },
     update: function(index) {
-        $('.counter').text(octopus.getMyClicks(index));
+        $('.click-counter').text(octopus.getMyClicks(index));
     }
 };
 var octopus = {
