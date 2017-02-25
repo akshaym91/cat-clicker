@@ -4,26 +4,31 @@
 <head>
     <title>Cat Clicker 1.0</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+
 </head>
 
 <body class="container">
     <div class="rows">
         <div class="column col-md-3">
-            <ul id="cat-list" class="list-group"></ul>
+            <ul id="cat-list" class="list-group" data-bind="foreach: catlist">
+                <a href="" class="list-group-item" data-bind="text: name, click: $parent.setCat"></a>
+            </ul>
         </div>
         <div class="column col-md-9" id="cat-canvas">
             <div class="image-holder" id="cat-canvas"></div>
-            <div class="details-holder">
-                <h3 class="cat-name"></h3>
-                <h4 class="click-counter"></h4>
+            <div class="details-holder" data-bind="with: currentCat">
+                <h3 class="cat-name" data-bind="text: name"></h3>
+                <h4 class="click-counter" data-bind="text: clickCount"></h4>
                 <p class="cat-url"></p>
-                <button class="btn btn-primary">Admin</button>
+                <p class="cat-level">Cat level: <span data-bind="text: catlevel"></span></p>
+                <img src="" alt="image of the selected cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}" class="cat-image">
             </div>
         </div>
     </div>
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/knockout-3.4.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="mock-data.js"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -1,21 +1,21 @@
 {
     "cats": [{
-        "name": "Cat 1",
+        "name": "Biba",
         "image": "img/cat1.jpg"
     }, {
-        "name": "Cat 2",
+        "name": "Cica",
         "image": "img/cat2.jpg"
     }, {
-        "name": "Cat 3",
+        "name": "Dida",
         "image": "img/cat3.jpg"
     }, {
-        "name": "Cat 4",
+        "name": "Fifa",
         "image": "img/cat4.jpg"
     }, {
-        "name": "Cat 5",
+        "name": "Giga",
         "image": "img/cat5.jpg"
     }, {
-        "name": "Cat 6",
+        "name": "Hiha",
         "image": "img/cat6.jpg"
     }]
 }
